@@ -31,7 +31,7 @@ class Header extends Component {
                 <Jumbotron fluid>
                 <Container fluid>
                     <h1 className="display-3">Cat Tinder</h1>
-                    <p className="lead">A place where cats can find their soul-mates!</p>
+                    <p className="lead">A place where cats can find their meow-mates!</p>
                 </Container>
                 </Jumbotron>
             </div>

@@ -1,6 +1,6 @@
 * { 
     padding: 0px; 
-    margin: 0px 
+    margin: 0px; 
   } 
 
 .navbar {
@@ -13,4 +13,14 @@
   margin: 0 !important;
   padding: 5rem;
   text-align: center;
+}
+
+.error-img {
+  height: 20rem;
+  width: 20rem;
+}
+
+.error-message {
+  text-align: center;
+  padding: 5rem 0 5rem 0;
 }
