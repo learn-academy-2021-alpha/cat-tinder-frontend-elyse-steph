@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Nav, NavItem, NavLink } from 'reactstrap';
-import { Jumbotron, Container } from 'reactstrap';
+import { Nav, NavItem, NavLink, Jumbotron, Container  } from 'reactstrap';
 
 class Header extends Component {
 
@@ -35,7 +34,7 @@ class Header extends Component {
                 </Container>
                 </Jumbotron>
             </div>
-                
+
             </>
         )
     }
