@@ -24,11 +24,10 @@ class Header extends Component {
                         <NavLink href="/catshow">Show</NavLink>
                     </NavItem>
                 </Nav>
-                <hr />
             </div>
             <div>
-                <Jumbotron fluid>
-                    <Container fluid>
+                <Jumbotron fluid className="app-title-container">
+                    <Container fluid className="app-title">
                         <h1 className="display-3">Cat Tinder</h1>
                         <p className="lead">A place where cats can find their meow-mates!</p>
                     </Container>
