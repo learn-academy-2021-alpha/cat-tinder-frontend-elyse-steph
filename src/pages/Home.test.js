@@ -11,8 +11,10 @@ describe('When Home renders', () => {
   beforeEach(() => {
     renderedHome = shallow(<Home />);
   });
-  it('displays Home', () => {
+  it('displays just one image of a cat', () => {
+    //act
     const img = renderedHome.find('img');
+    // assert
     expect(img.length).toEqual(1)
   })
 })

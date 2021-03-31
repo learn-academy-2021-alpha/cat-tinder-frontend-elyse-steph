@@ -13,6 +13,8 @@ describe('When App renders', () => {
   });
   it('displays Footer', () => {
     const footer = renderedFooter.find('h5');
+    // const footerMessage = renderedFooter.find("Footer");
     expect(footer.length).toEqual(1)
+    // expect(footerMessage.text()).toEqual("Brought to you by Steph and Elyse from Learn Academy!")
   })
 })
