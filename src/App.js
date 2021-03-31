@@ -24,6 +24,9 @@ class App extends Component {
     }
   }
 
+  createNewCat = (newcat) => {
+    console.log(newcat);
+  }
 
   render () {
   return (
@@ -41,7 +44,9 @@ class App extends Component {
           const foundKitty = this.state.cats.find(cat => cat.id === id);
           return <CatShow cat = { foundKitty } /> }} />
 
-        <Route path="/catnew" component={ CatNew } />
+        <Route path="/catnew" render={(props) => {
+          return <CatNew createNewCat = { this.createNewCat } />
+        }} />
 
         <Route path="/catedit" component={ CatEdit } />
 
