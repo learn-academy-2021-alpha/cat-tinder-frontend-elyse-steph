@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CatIndex from "./pages/CatIndex"; 
-import CatShow from "./pages/CatShow" 
+import CatIndex from "./pages/CatIndex";
+import CatShow from "./pages/CatShow"
 import CatNew from "./pages/CatNew";
-import CatEdit from "./pages/CatEdit"; 
+import CatEdit from "./pages/CatEdit";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import {
@@ -31,19 +31,20 @@ class App extends Component {
       <Header />
       <Switch>
         <Route exact path="/" component={ Home } />
-        {/*         */}
-        <Route path="/catindex" 
-        render = { () => <CatIndex cats = {this.state.cats} />} 
+
+        <Route path="/catindex"
+        render = { () => <CatIndex cats = {this.state.cats} />}
         />
-        {/*         */}
-        <Route path="/catshow/:id" render = {(props) => { const id = +props.match.params.id;
-        const foundKitty = this.state.cats.find(cat => cat.id === id);
-        return <CatShow cat = { foundKitty } /> }} />
-        {/*         */}
+
+        <Route path="/catshow/:id" render = {(props) => {
+          const id = +props.match.params.id;
+          const foundKitty = this.state.cats.find(cat => cat.id === id);
+          return <CatShow cat = { foundKitty } /> }} />
+
         <Route path="/catnew" component={ CatNew } />
-        {/*         */}
+
         <Route path="/catedit" component={ CatEdit } />
-        {/*         */}
+
         <Route component={ NotFound } />
       </Switch>
       <Footer />
