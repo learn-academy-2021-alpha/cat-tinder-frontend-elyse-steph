@@ -20,9 +20,6 @@ class Header extends Component {
                     <NavItem>
                         <NavLink href="/catnew">New</NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink href="/catshow">Show</NavLink>
-                    </NavItem>
                 </Nav>
             </div>
             <div>
