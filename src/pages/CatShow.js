@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Button } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
 class Show extends Component {
 
@@ -11,6 +13,11 @@ class Show extends Component {
             <div>Name: { cat.name }</div>
             <div>Age: { cat.age }</div>
             <div>Enjoys: { cat.enjoys }</div>
+            <NavLink to={ `/catedit/${this.props.cat.id}` }>
+             <Button color="secondary">
+               Edit Cat Profile
+             </Button>
+           </NavLink>
             </>
         )
     }

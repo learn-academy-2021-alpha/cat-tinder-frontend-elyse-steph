@@ -12,9 +12,6 @@ class Header extends Component {
                         <NavLink href="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/catedit">Edit</NavLink>
-                    </NavItem>
-                    <NavItem>
                         <NavLink href="/catindex">Index</NavLink>
                     </NavItem>
                     <NavItem>
