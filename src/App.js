@@ -42,7 +42,22 @@ componentDidMount(){
   }
 
   createNewCat = (newcat) => {
-    console.log(newcat);
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(newcat),
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      method: "POST"
+    })
+    .then (response => {
+      response.status === 422 ? alert("something is wrong with your submission") : response.json()
+    })
+    .then(payload => {
+      this.catIndex()
+    })
+    .catch(errors => {
+      console.log("create errors", errors);
+    })
   }
 
   updateCat = (cat, id) => {
