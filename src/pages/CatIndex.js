@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
 
 class Index extends Component {
 
@@ -11,9 +12,9 @@ class Index extends Component {
               { this.props.cats.map(cat => {
                   return (
                     <li key = {cat.id}>
-                        <a href = {`/catshow/${cat.id}`}>
+                        <NavLink to= {`/catshow/${cat.id}`}>
                         {cat.name}
-                        </a>
+                        </NavLink>
                     </li>
                   )
                 })}

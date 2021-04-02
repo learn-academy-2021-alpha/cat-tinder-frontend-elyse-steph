@@ -14,14 +14,31 @@ import {
 } from "react-router-dom";
 
 import './App.css';
-import cats from "./mockCats.js"
+// import cats from "./mockCats.js"
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      cats: cats
+      cats: []
     }
+  }
+
+componentDidMount(){
+  this.catIndex()
+}
+
+  catIndex = () => {
+    fetch("http://localhost:3000/cats")
+    .then(response => {
+      return response.json()
+    })
+    .then(catsArray => {
+      this.setState({ cats: catsArray })
+    })
+    .catch(errors => {
+      console.log("index errors", errors);
+    })
   }
 
   createNewCat = (newcat) => {
@@ -57,7 +74,7 @@ class App extends Component {
           let id = props.match.params.id;
           let cat = this.state.cats.find(cat => cat.id === +id);
           return (
-            <CatEdit 
+            <CatEdit
               updateCat = { this.updateCat }
               cat = { cat } />
           )
